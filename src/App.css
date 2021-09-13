@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: helvetica, arial, sans-serif;
+  transition: 0.5s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  width: 100%;
+  height: 10vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+}
+
+nav a:nth-child(1){
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav a:nth-last-child(1){
+  text-decoration: none;
+  color: black;
+  background-color:#FAFF00;
+  height: 2.5rem;
+  width: 7rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.countriesContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #232323;
+}
+
+.countries{
+  width: 17%;
+  height: 23rem;
+  margin: 1rem;
+  background-color: #FAFF00;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, 
+  rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.countries h3{
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.countries h4{
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.countries .img{
+  width: 100%;
+  height: 10rem;
+
+}
+
+.img img{
+  width: 100%;
+  height: 100%;
+}
+
+.verMasButton{
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+}
+
+.verMasButton a {
+  background-color: black;
+  height: 2.8rem;
+  width: 50%;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;  
+}
+
+.search-box-container{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  height: 90vh;
+  background-color: #232323;
+}
+
+.search-box-container h1{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.input {
+  border: 0;
+  height: 3rem;
+  width: 15rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 3rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
+  rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button{
+  background-color: #FAFF00;
+  height: 3rem;
+  border: 0;
+  width: 5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
+  rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.container-country {
+  background-color: #232323;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-country h1{
+  margin-top: 3rem;
+  font-size: 2.5rem;
+}
+
+.boxes{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.box{
+  width: 30%;
+  margin: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, 
+  rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.box img{
+  width: 100%;
+  height: 100%;
+}
+
+.box h2{
+  color: black;
+  height: 4rem;
+  padding: 1rem;
+  background-color: #FAFF00;
+}
+
+.box .box-info{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box-info h3{
+  width: 50%;
+  padding: 0.580rem;
+}
+
+.box-info p{
+  width: 50%;
+  border: 1px solid rgb(36, 33, 33);
+  background-color: #444444;
+  padding: 0.580rem;
 }
