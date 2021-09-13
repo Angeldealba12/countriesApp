@@ -35,6 +35,8 @@ nav a:nth-last-child(1){
   font-weight: bold;
 }
 
+
+
 .countriesContainer{
   display: flex;
   justify-content: center;
@@ -94,6 +96,8 @@ nav a:nth-last-child(1){
   text-decoration: none;
   color: white;  
 }
+
+
 
 .search-box-container{
   display: flex;
@@ -186,4 +190,28 @@ button{
   border: 1px solid rgb(36, 33, 33);
   background-color: #444444;
   padding: 0.580rem;
+}
+
+@media(max-width:1000px){
+  nav{
+    flex-direction: column;
+    height: 15vh;
+
+  }
+
+  .countriesContainer{
+    flex-direction: column;
+  }
+
+  .countries{
+    width: 70%;
+  }
+
+  .boxes{
+    flex-direction: column;
+  }
+
+  .box{
+    width: 80%;
+  }
 }
