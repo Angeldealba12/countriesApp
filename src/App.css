@@ -202,6 +202,42 @@ button{
   padding: 0.580rem;
 }
 
+.weather-box{
+  width: 30%;
+  margin: 1rem;
+  height: 30rem;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, 
+  rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.weather-box h2{
+  color: black;
+  height: 4rem;
+  padding: 1rem;
+  background-color: #FAFF00;
+}
+
+.weather-box .weather-info{
+  border: 1px solid #fff;
+  height: 82%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.weather-info h3{
+  font-size: 2rem;
+}
+
+.weather-info p {
+  font-size: 1.3rem;
+}
+
+.weather-info .temp{
+  font-size: 5rem;
+}
+
 @media(max-width:1000px){
 
   .countriesContainer{
@@ -217,6 +253,10 @@ button{
   }
 
   .box{
+    width: 80%;
+  }
+
+  .weather-box{
     width: 80%;
   }
 }

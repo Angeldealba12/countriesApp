@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import Weather from './Weather'
 
 export const CountryPage = () => {
 
@@ -90,6 +91,7 @@ export const CountryPage = () => {
                     }
                 </div>
                </div>
+               <Weather city={capital} />
                <div className="box">
                <h2>Codes</h2>
                <div className="box-info">
@@ -125,7 +127,7 @@ export const CountryPage = () => {
                          })
                      }  
                 </div>
-               </div>
+               </div>        
            </div>
         </div>
     )
