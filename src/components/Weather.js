@@ -1,5 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import OpacityIcon from '@material-ui/icons/Opacity';
+import AcUnitIcon from '@material-ui/icons/AcUnit';
+
 
 const Weather = ({ city }) => {
   const [main, setMain] = useState();
@@ -43,8 +46,8 @@ const Weather = ({ city }) => {
         <p>{main}</p>
         <p>{description}</p>
         <p className="temp">{temp}°C</p>
-        <p>Humidity: {huminity}%</p>
-        <p>Wind: {wind} </p>
+        <p><OpacityIcon/>  Humidity: {huminity}%</p>
+        <p><AcUnitIcon/>  Wind: {wind} </p>
       </div>
     </div>
   );
