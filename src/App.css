@@ -207,7 +207,7 @@ button{
   margin: 1rem;
   height: 30rem;
   color: black;
-  background-image: url(/src/components/nubes.jpg);
+  background-image: url(/src/components/Img/nubes.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

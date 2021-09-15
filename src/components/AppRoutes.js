@@ -2,10 +2,10 @@ import React from 'react'
 import {
     BrowserRouter as Router, Switch, Route
   } from "react-router-dom";
-import { CountryPage } from './CountryPage';
-import Home from './Home';
+import { CountryPage } from './Country/CountryPage';
+import Home from './Home/Home';
 import NavTab from './NavTab';
-import Search from './Search';
+import Search from './Search/Search';
 
 const AppRoutes = () => {
 
