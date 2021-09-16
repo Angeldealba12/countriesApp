@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+
 const Countries = ({name, flag, capital, region, alpha2Code}) => {
 
     return (

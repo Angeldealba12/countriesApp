@@ -1,3 +1,142 @@
-.region-section{
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+.region-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #595260;
+}
+
+.select {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.select button {
+  border: 0;
+  height: 3rem;
+  width: 11rem;
+  margin: 0.5rem;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #2C2E43;
+  cursor: pointer;
+  margin-left: 2.1rem;
+}
+
+.select button:hover {
+  color: #2C2E43;
+  background-color: white;
+  height: 4rem;
+  width: 12rem;
+}
+
+.countries-by-region {
+  width: 75%;
+  display: flex;
+}
+
+.regions-container {
+    background-color: transparent;
+}
+
+.couRegions {
+  width: 20%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.title-all {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  background-color: #2C2E43;
+  color: white;
+}
+
+.all2{
+    background-color: transparent;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.title-all h2 {
+  margin-left: 2.1rem;
+}
+
+.child-container{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2C2E43;
+}
+
+.child-container .world{
+    width: 50%;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.child-container .world2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.world2 h1{
+    color: white;
+    font-size: 3.5rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.world2 h2{
+    color: white;
+    font-size: 2rem;
+}
+
+.child-container img{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1000px) {
+  .region-section {
+    flex-direction: column;
+  }
+  .couRegions {
+    width: 80%;
+  }
+  .select {
+    width: 80%;
+  }
+
+  .child-container{
+      flex-direction: column;
+  }
+  .child-container .world{
+      width: 100%;
+      height: 50%;
+  }
+
+  .child-container .world2{
+      width: 100%;
+      padding: 3rem;
+      order: 2; 
+  }
+  .child-container img{ 
+    width: 100%;
+    height: 100%;
+}
+
+
 }

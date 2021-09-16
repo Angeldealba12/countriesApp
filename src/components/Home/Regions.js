@@ -20,7 +20,7 @@ const Regions = ({region}) => {
         
     }, [region])
 
-    const list = regionsArr.map((country) => (<CarouselComponent
+    const list = regionsArr.slice(0,4).map((country) => (<CarouselComponent
          key={country.name} 
          name={country.name}
          flag={country.flag}
@@ -32,7 +32,7 @@ const Regions = ({region}) => {
 
 
     return (
-       <div className="countries-by-region">
+       <div className="countriesContainer regions-container">
        {list}
        </div>      
     )

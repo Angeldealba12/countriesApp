@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom"
+import '../Home/Regions.css'
 
 const CarouselComponent = ({ name, flag, alpha2Code, capital, region }) => {
   return (
-    <div className="countries">
+    <div className="countries couRegions">
             <div className="img">
             <img src={flag} alt={name}/>
             <h3>{name}</h3>

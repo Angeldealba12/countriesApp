@@ -28,8 +28,21 @@ const Home = () => {
 
   return (
     <>
+    <div className="child-container"> 
+      <div className="world2">
+          <h2>
+            Explore and learn about 
+          </h2>
+          <h1>all the countries in the world</h1>
+      </div>
+      <div className="world"><img src="https://acegif.com/wp-content/gifs/globe-35.gif" alt="world"/></div>
+    </div>
       <div>
           <SelectRegions/>
+      </div>
+      
+      <div className="title-all" >
+      <h2 >List of all countries</h2>
       </div>
       <div className="countriesContainer">{list}</div>
     </>
