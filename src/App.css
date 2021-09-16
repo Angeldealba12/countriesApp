@@ -131,7 +131,7 @@ nav a:nth-last-child(1):hover{
   rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-button{
+.search-box-container button{
   background-color: #FAFF00;
   height: 3rem;
   border: 0;

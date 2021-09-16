@@ -1,36 +1,39 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
-import Countries from './Countries';
+import React from "react";
+import { useState, useEffect } from "react";
+import Countries from "./Countries";
+import SelectRegions from "./SelectRegions";
 
 const Home = () => {
+  const [countries, setCountries] = useState([]);
 
-    const [countries, setCountries] = useState([])
+  useEffect(() => {
+    const logic = async () => {
+      const data = await fetch("https://restcountries.eu/rest/v2/all");
+      const response = await data.json();
+      setCountries(response);
+    };
+    logic();
+  }, []);
 
-    useEffect(() =>{
-        const logic = async () => {
-            const data = await fetch('https://restcountries.eu/rest/v2/all')
-            const response = await data.json();
-            setCountries(response)
-        }
-        logic();
-    },[])
+  const list = countries.map((country) => (
+    <Countries
+      key={country.name}
+      name={country.name}
+      capital={country.capital}
+      region={country.region}
+      alpha2Code={country.alpha2Code}
+      flag={country.flag}
+    />
+  ));
 
+  return (
+    <>
+      <div>
+          <SelectRegions/>
+      </div>
+      <div className="countriesContainer">{list}</div>
+    </>
+  );
+};
 
-    const list = countries.map(country => <Countries 
-    key={country.name}
-    name={country.name}
-    capital={country.capital}
-    region={country.region}
-    alpha2Code={country.alpha2Code}
-    flag={country.flag}
-    />)
-
-    return (
-        <div className="countriesContainer">
-           {list}      
-        </div>
-    )
-    
-}
-
-export default Home
+export default Home;
