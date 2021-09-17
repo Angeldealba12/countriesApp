@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 const SelectRegions = () => {
-  const [region, setRegion] = useState("Africa");
+  const [region, setRegion] = useState("");
   const [regions] = useState([
     "Africa",
     "Americas",
@@ -36,9 +36,12 @@ const SelectRegions = () => {
         <h2>{region}</h2>
       </div>
       <Regions region={region} />
-      <Link className="moreRegion" to={`/regions/${region}`}>
-          »︁
-      </Link>
+      {
+        region.length !== 0 ? <Link className="moreRegion" to={`/regions/${region}`}>
+        »︁
+    </Link> : null
+      }
+      
       
     </div>
   );
