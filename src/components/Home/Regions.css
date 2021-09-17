@@ -152,8 +152,18 @@
       width: 100%;
   }
 
-  .child-container .world h1{
-    font-size: 1rem;
+  .child-container .world2{
+    order: 2;
+    padding: 3rem;
+    width: 100%;
+  }
+
+  .world2 h1{
+    width: 100%;
+  }
+
+  .child-container .world{
+    height: 20rem;
   }
   
   .child-container img{
@@ -162,5 +172,10 @@
 }
 .title h1{
   font-size: 5rem;
+  
+}
+
+.image{
+  order: 2;
 }
 }
