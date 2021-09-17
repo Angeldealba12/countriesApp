@@ -1,7 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
-const Countries = ({ name, flag, capital, region, alpha2Code }) => {
+export const CountriesRegion = ({
+  name,
+  flag,
+  capital,
+  region,
+  alpha2Code,
+}) => {
   return (
     <div className="countries">
       <div className="img">
@@ -17,5 +23,3 @@ const Countries = ({ name, flag, capital, region, alpha2Code }) => {
     </div>
   );
 };
-
-export default Countries;

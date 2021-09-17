@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;1,300&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: helvetica, arial, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   transition: 0.5s;
 }
 
@@ -56,6 +58,11 @@ nav a:nth-last-child(1):hover{
   background-color: #FFD523;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, 
   rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.countries:hover{
+  height: 24rem;
+  margin: 0.3rem;
 }
 
 .countries h3{
@@ -141,12 +148,17 @@ nav a:nth-last-child(1):hover{
   font-weight: bold;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
   rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  cursor: pointer;
+}
+
+.search-box-container button:hover{
+  background-color: white;
+  color: #2C2E43;
 }
 
 
-
 .container-country {
-  background-color: #232323;
+  background-color: #2C2E43;
   color: white;
   display: flex;
   justify-content: center;
@@ -183,7 +195,7 @@ nav a:nth-last-child(1):hover{
   color: black;
   height: 4rem;
   padding: 1rem;
-  background-color: #FAFF00;
+  background-color: #FFD523;
 }
 
 .box .box-info{
@@ -198,8 +210,8 @@ nav a:nth-last-child(1):hover{
 
 .box-info p{
   width: 50%;
-  border: 1px solid rgb(36, 33, 33);
-  background-color: #444444;
+  border: 1px solid #B2B1B9;
+  background-color: #595260;
   padding: 0.580rem;
 }
 
@@ -220,7 +232,7 @@ nav a:nth-last-child(1):hover{
   color: black;
   height: 4rem;
   padding: 1rem;
-  background-color: #FAFF00;
+  background-color: #FFD523;
 }
 
 .weather-box .weather-info{

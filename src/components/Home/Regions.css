@@ -4,16 +4,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   background-color: #595260;
 }
 
 .select {
-  width: 20%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
 .select button {
@@ -24,14 +24,16 @@
   color: white;
   font-size: 1.1rem;
   font-weight: bold;
-  background-color: #2C2E43;
+  border: 2px solid white;
+  background-color: transparent;
   cursor: pointer;
   margin-left: 2.1rem;
+  margin-top: 2.1rem;
 }
 
 .select button:hover {
-  color: #2C2E43;
-  background-color: white;
+  color: white;
+  background-color: #2C2E43;;
   height: 4rem;
   width: 12rem;
 }
@@ -47,14 +49,15 @@
 
 .couRegions {
   width: 20%;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .title-all {
   height: 10vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-size: 1.1rem;
   background-color: #2C2E43;
   color: white;
@@ -64,6 +67,8 @@
     background-color: transparent;
     margin: 0;
     font-size: 1.5rem;
+    width: 100%;
+    
 }
 
 .title-all h2 {
@@ -109,15 +114,35 @@
     height: 100%;
 }
 
+.moreRegion{
+  color: white;
+  text-decoration: none;
+  height: 5rem;
+  font-size: 4rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moreRegion:hover{
+  font-size: 8rem;
+}
+
+.title h1{
+  font-size: 10rem;
+}
+
 @media (max-width: 1000px) {
   .region-section {
     flex-direction: column;
   }
   .couRegions {
-    width: 80%;
+    width: 90%;
   }
   .select {
     width: 80%;
+    flex-direction: column;
   }
 
   .child-container{
@@ -125,18 +150,9 @@
   }
   .child-container .world{
       width: 100%;
-      height: 50%;
   }
-
-  .child-container .world2{
-      width: 100%;
-      padding: 3rem;
-      order: 2; 
-  }
-  .child-container img{ 
+  .child-container img{
     width: 100%;
     height: 100%;
 }
-
-
 }

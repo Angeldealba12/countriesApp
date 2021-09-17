@@ -40,7 +40,6 @@ const Home = () => {
       <div>
           <SelectRegions/>
       </div>
-      
       <div className="title-all" >
       <h2 >List of all countries</h2>
       </div>
