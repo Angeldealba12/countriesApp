@@ -16,6 +16,9 @@ const SelectRegions = () => {
 
   return (
     <div className="region-section">
+      <div  style={{marginTop: '2rem'}} className="title-all all2">
+        <h2>Explore by Region</h2>
+      </div>
       <div className="select">
         {regions.map((region) => {
           return (
