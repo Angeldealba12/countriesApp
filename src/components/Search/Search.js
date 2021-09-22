@@ -14,7 +14,9 @@ const Search = () => {
 
     const handleOnSubmit = (event) => {
         event.preventDefault()
-        setCountry(inputValue)
+            setCountry(inputValue)
+            setInputValue('');
+        
     }
 
     return (
