@@ -1,19 +1,11 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useFetchAllCountries } from "../../hooks/useFetchAllCountries";
 import Countries from "./Countries";
 import SelectRegions from "./SelectRegions";
 
 const Home = () => {
-  const [countries, setCountries] = useState([]);
-
-  useEffect(() => {
-    const logic = async () => {
-      const data = await fetch("https://restcountries.eu/rest/v2/all");
-      const response = await data.json();
-      setCountries(response);
-    };
-    logic();
-  }, []);
+  
+  const { data:countries } = useFetchAllCountries()
 
   const list = countries.map((country) => (
     <Countries
