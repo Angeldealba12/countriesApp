@@ -22,7 +22,7 @@ const Search = () => {
     return (
         <div className="search-box-container">
             <form onSubmit={handleOnSubmit}>
-             <h1>Search for a country</h1>   
+             <h1 className="animate__animated animate__backInDown" >Search for a country</h1>   
             <input value={inputValue} type="text" className="input" placeholder="Type country..." onChange={handleOnChange}/>
             <button>Search</button>
             </form>

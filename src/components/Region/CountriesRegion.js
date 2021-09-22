@@ -9,7 +9,7 @@ export const CountriesRegion = ({
   alpha2Code,
 }) => {
   return (
-    <div className="countries">
+    <div className="countries animate__animated animate__backInDown">
       <div className="img">
         <img src={flag} alt={name} />
         <h3>{name}</h3>

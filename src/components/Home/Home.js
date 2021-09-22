@@ -30,10 +30,10 @@ const Home = () => {
     <>
     <div className="child-container"> 
       <div className="world2">
-          <h2>
+          <h2 className="animate__animated animate__backInDown" >
             Explore and learn about 
           </h2>
-          <h1>all the countries in the world</h1>
+          <h1 className="animate__animated animate__bounceInDown">all the countries in the world</h1>
       </div>
       <div className="world"><img src="https://acegif.com/wp-content/gifs/globe-35.gif" alt="world"/></div>
     </div>

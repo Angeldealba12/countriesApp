@@ -4,7 +4,7 @@ import '../Home/Regions.css'
 
 const CarouselComponent = ({ name, flag, alpha2Code, capital, region }) => {
   return (
-    <div className="countries couRegions">
+    <div className="countries couRegions animate__animated animate__backInDown">
             <div className="img">
             <img src={flag} alt={name}/>
             <h3>{name}</h3>

@@ -36,7 +36,7 @@ const RegionPage = () => {
         <>
         <div className="child-container">
         <div className="world2 title">
-            <h1>{region}</h1>
+            <h1 className="animate__animated animate__backInDown" >{region}</h1>
         </div>
         {
             region === 'Africa' ? <div className="world image">

@@ -260,6 +260,12 @@ nav a:nth-last-child(1):hover{
   font-size: 5rem;
 }
 
+.loading{
+  margin: 3rem;
+  font-size: 2rem;
+  color: white;
+}
+
 @media(max-width:1000px){
 
   .countriesContainer{
