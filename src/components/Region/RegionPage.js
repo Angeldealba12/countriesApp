@@ -12,7 +12,7 @@ const RegionPage = () => {
     useEffect(() =>{
         if(region){
             const logic = async () => {
-                const data = await fetch(`https://restcountries.eu/rest/v2/region/${region}`)
+                const data = await fetch(`https://restcountries.com/v2/continent/${region}`)
                 const response = await data.json();
                 setCountries(response)
             }
@@ -28,7 +28,7 @@ const RegionPage = () => {
       capital={country.capital}
       region={country.region}
       alpha2Code={country.alpha2Code}
-      flag={country.flag}
+      flag={country.flags[0]}
     />
   ));
 

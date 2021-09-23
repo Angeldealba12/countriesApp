@@ -11,7 +11,7 @@ const Regions = ({region}) => {
     useEffect(() =>{
         if(region){
             const logic = async () => {
-                const data = await fetch(`https://restcountries.eu/rest/v2/region/${region}`)
+                const data = await fetch(`https://restcountries.com/v2/continent/${region}`)
                 const response = await data.json();
                 setRegionArr(response)
             }
@@ -23,7 +23,7 @@ const Regions = ({region}) => {
     const list = regionsArr.slice(0,4).map((country) => (<CarouselComponent
          key={country.name} 
          name={country.name}
-         flag={country.flag}
+         flag={country.flags[0]}
          alpha2Code={country.alpha2Code} 
          capital={country.capital} 
          region = {country.region}

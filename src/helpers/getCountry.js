@@ -1,7 +1,7 @@
 
 export const getCountry = async ( country ) => {
 
-    const data = await fetch(`https://restcountries.eu/rest/v2/name/${ encodeURI( country )}`);
+    const data = await fetch(`https://restcountries.com/v2/name/${ encodeURI( country )}`);
     const response = await data.json();
 
     const countryInfo = response.map(country => {
@@ -10,7 +10,7 @@ export const getCountry = async ( country ) => {
             capital: country.capital,
             alpha2Code: country.alpha2Code,
             region: country.region,
-            flag: country.flag,
+            flag: country.flags[0],
         }
     })
 

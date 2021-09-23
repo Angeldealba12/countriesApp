@@ -5,16 +5,16 @@ import SelectRegions from "./SelectRegions";
 
 const Home = () => {
   
-  const { data:countries } = useFetchAllCountries()
+  const { data } = useFetchAllCountries()
 
-  const list = countries.map((country) => (
+  const list = data.map((country) => (
     <Countries
-      key={country.name}
+      key={country.alpha2Code}
       name={country.name}
       capital={country.capital}
       region={country.region}
       alpha2Code={country.alpha2Code}
-      flag={country.flag}
+      flag={country.flags[0]}
     />
   ));
 
