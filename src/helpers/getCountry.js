@@ -10,7 +10,7 @@ export const getCountry = async ( country ) => {
             capital: country.capital,
             alpha2Code: country.alpha2Code,
             region: country.region,
-            flag: country.flags[0],
+            flag: country.flags.svg,
         }
     })
 

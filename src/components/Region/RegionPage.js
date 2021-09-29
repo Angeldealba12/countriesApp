@@ -28,7 +28,7 @@ const RegionPage = () => {
       capital={country.capital}
       region={country.region}
       alpha2Code={country.alpha2Code}
-      flag={country.flags[0]}
+      flag={country.flags.svg}
     />
   ));
 

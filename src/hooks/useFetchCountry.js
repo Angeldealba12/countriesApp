@@ -11,6 +11,11 @@ export const useFetchCountry = ( country ) => {
 
     useEffect(() => {
 
+        setState({
+            data: [],
+            loading: true
+        })
+
         getCountry(country)
         .then( countries => {
             setTimeout(() => {

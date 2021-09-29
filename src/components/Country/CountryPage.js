@@ -29,14 +29,14 @@ export const CountryPage = () => {
             const logic = async () => {
                 const data = await fetch(`https://restcountries.com/v2/name/${username}`);
                 const response = await data.json();
-                setFlag(response[0].flags[0])
+                setFlag(response[0].flags.svg)
                 setNativeName(response[0].nativeName)
                 setOfficialName(response[0].altSpellings[1])
                 setSpellings(response[0].altSpellings[0])
                 setNativelanguage(response[0].languages[0].nativeName)
                 setLanguages(response[0].languages)
                 setRegion(response[0].region)
-                setSubRegion(response[0].subregion)
+                setSubRegion(response[0].continent)
                 setCapital(response[0].capital)
                 setDemonym(response[0].demonym)
                 setBorders(response[0].borders)
@@ -112,7 +112,7 @@ export const CountryPage = () => {
                <div className="box-info">
                     <h3>Region</h3>
                     <p>{region}</p>
-                    <h3>Subregion</h3>
+                    <h3>Continent</h3>
                     <p>{subRegion}</p>
                     <h3>Capital</h3>
                     <p>{capital}</p>
@@ -122,7 +122,7 @@ export const CountryPage = () => {
                      {
                          borders.map((value) =>{
                              return(
-                                <p key={value} >{value}</p>
+                                <p key={value}>{value}</p>
                              )
                          })
                      }  
