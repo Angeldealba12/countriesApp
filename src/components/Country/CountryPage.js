@@ -27,7 +27,7 @@ export const CountryPage = () => {
     useEffect(() => {
         if(username){
             const logic = async () => {
-                const data = await fetch(`https://restcountries.com/v2/name/${username}`);
+                const data = await fetch(`https://restcountries.com/v3.1/name/${username}`);
                 const response = await data.json();
                 setFlag(response[0].flags.svg)
                 setNativeName(response[0].nativeName)

@@ -11,7 +11,7 @@ const Regions = ({region}) => {
     useEffect(() =>{
         if(region){
             const logic = async () => {
-                const data = await fetch(`https://restcountries.com/v2/continent/${region}`)
+                const data = await fetch(`https://restcountries.com/v3.1/region/${region}`)
                 const response = await data.json();
                 setRegionArr(response)
             }
