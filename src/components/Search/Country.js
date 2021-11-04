@@ -19,15 +19,15 @@ const Country = ({ country }) => {
             {
                 data.map((data) => {
                     return (
-                       <div className="img  " key={data.name}>
-                       <img src={data.flag} alt={data.name} />
-                       <h3>{data.name}</h3>
-                       <h3>{data.alpha2Code}</h3>
+                       <div className="img  " key={data.name.common}>
+                       <img src={data.flag} alt={data.name.common} />
+                       <h3>{data.name.common}</h3>
+                       <h3>{data.fifa}</h3>
                        {
                            data.capital ? <div><h4>Capital: {data.capital}</h4>  <h4>Region: {data.region}</h4></div> : null
                        }
                        <div className="verMasButton">
-                      <Link to={`/country/${data.name}`}>More info</Link> 
+                      <Link to={`/country/${data.name.common}`}>More info</Link> 
                    </div>
                    </div>
                     )

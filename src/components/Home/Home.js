@@ -1,22 +1,23 @@
 import React from "react";
 import { useFetchAllCountries } from "../../hooks/useFetchAllCountries";
 import Countries from "./Countries";
+
 import SelectRegions from "./SelectRegions";
 
 const Home = () => {
   
   const { data } = useFetchAllCountries()
 
-  const list = data.map((country) => (
+  const list = data.map(countries => (
     <Countries
-      key={country.alpha2Code}
-      name={country.name}
-      capital={country.capital}
-      region={country.region}
-      alpha2Code={country.alpha2Code}
-      flag={country.flags.svg}
+    key={countries.name.common}
+     name={countries.name.common} 
+      flag={countries.flags.png}
+      capital={countries.capital}
+      region={countries.region}
     />
-  ));
+  )
+  )
 
   return (
     <>

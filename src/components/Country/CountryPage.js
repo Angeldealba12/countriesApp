@@ -10,8 +10,6 @@ export const CountryPage = () => {
     const [nativeName, setNativeName] = useState();
     const [officialName, setOfficialName] = useState();
     const [spellings, setSpellings] = useState();
-    const [nativeLanguage, setNativelanguage] = useState();
-    const [languages, setLanguages] = useState([]);
     const [region, setRegion] = useState();
     const [subRegion, setSubRegion] = useState();
     const [capital, setCapital] = useState();
@@ -21,7 +19,6 @@ export const CountryPage = () => {
     const [code3, setCode3] = useState();
     const [numericCode, setNumericCode] = useState();
     const [interCallingCode, setInterCallingCode] = useState();
-    const [topLevelDomain, setTopLevelDomain] = useState();
 
 
     useEffect(() => {
@@ -29,22 +26,19 @@ export const CountryPage = () => {
             const logic = async () => {
                 const data = await fetch(`https://restcountries.com/v3.1/name/${username}`);
                 const response = await data.json();
-                setFlag(response[0].flags.svg)
-                setNativeName(response[0].nativeName)
-                setOfficialName(response[0].altSpellings[1])
+                setFlag(response[0].flags.png)
+                setNativeName(response[0].name.common)
+                setOfficialName(response[0].name.official)
                 setSpellings(response[0].altSpellings[0])
-                setNativelanguage(response[0].languages[0].nativeName)
-                setLanguages(response[0].languages)
                 setRegion(response[0].region)
-                setSubRegion(response[0].continent)
+                setSubRegion(response[0].region)
                 setCapital(response[0].capital)
-                setDemonym(response[0].demonym)
+                setDemonym(response[0].demonyms.eng.f)
                 setBorders(response[0].borders)
-                setCode2(response[0].alpha2Code)
-                setCode3(response[0].alpha3Code)
-                setNumericCode(response[0].numericCode)
-                setInterCallingCode(response[0].callingCodes[0])
-                setTopLevelDomain(response[0].topLevelDomain[0])
+                setCode2(response[0].cca2)
+                setCode3(response[0].cca3)
+                setNumericCode(response[0].ccn3)
+                setInterCallingCode(response[0].ccn3)
                 
             }
             logic();
@@ -76,21 +70,6 @@ export const CountryPage = () => {
                     <p>{spellings}, {nativeName}, {officialName}</p>
                 </div>
                </div>
-               <div className="box">
-                <h2>Language</h2>
-                <div className="box-info">
-                    <h3>Native Language</h3>
-                    <p>{nativeLanguage}</p>
-                    <h3>Languages</h3>
-                    {
-                        languages.map((value) => {
-                            return(
-                                <p key={value.name}>{value.iso639_1}, {value.name}, {value.nativeName}</p>
-                            )
-                        })
-                    }
-                </div>
-               </div>
                <Weather city={capital} />
                <div className="box">
                <h2>Codes</h2>
@@ -104,7 +83,6 @@ export const CountryPage = () => {
                     <h3>International calling code</h3>
                     <p>{interCallingCode}</p>
                     <h3>Top level domain</h3>
-                    <p>{topLevelDomain}</p>
                 </div>
                </div>
                <div className="box">

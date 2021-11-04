@@ -8,7 +8,7 @@ export const getCountry = async ( country ) => {
         return {
             name: country.name,
             capital: country.capital,
-            alpha2Code: country.alpha2Code,
+            alpha2Code: country.fifa,
             region: country.region,
             flag: country.flags.svg,
         }

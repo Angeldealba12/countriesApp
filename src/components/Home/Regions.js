@@ -21,8 +21,8 @@ const Regions = ({region}) => {
     }, [region])
 
     const list = regionsArr.slice(0,4).map((country) => (<CarouselComponent
-         key={country.name} 
-         name={country.name}
+         key={country.name.common} 
+         name={country.name.common}
          flag={country.flags.svg}
          alpha2Code={country.alpha2Code} 
          capital={country.capital} 
